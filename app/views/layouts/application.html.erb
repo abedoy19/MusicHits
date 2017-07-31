@@ -1,21 +1,34 @@
-	<!DOCTYPE html>
-	<html>
-	  <head>
-	    <title>MusicHits</title>
-	    <%= csrf_meta_tags %>
+<!DOCTYPE html>
+<html>
 
-	    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-	    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	  </head>
+<head>
+    <title>MusicHits</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-	  <body>
-	<ul>
-	  <li><%= link_to "Inicio", root_path %></li>
-	  <li><a href="/registro">Registro</a></li>
-	  <li><%= link_to "Iniciar sesión", login_path %></li>
-	</ul>
-	  <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-	    <%= yield %>
-	  </body>
-	</html>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Music Hits</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Crear cuenta", new_user_registration_path %></li>
+            <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <%= yield %>
+</body>
+
+</html>
