@@ -3,7 +3,6 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>#</th>
       <th>Título</th>
       <th>Cantante</th>
       <th>Álbum</th>
@@ -15,7 +14,6 @@
   <tbody>
   	 <% @songs.each do |song| %>
     <tr>
-      <th scope="row"><%= song.id %></th>
       <td><%= song.name %></td>
       <td><%= song.singer %></td>
       <td><%= song.album %></td>
@@ -26,5 +24,4 @@
     <% end %>
   </tbody>
 </table>
-
 </div>

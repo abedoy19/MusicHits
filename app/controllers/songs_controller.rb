@@ -1,4 +1,7 @@
 class SongsController < ApplicationController
+
+   # Para que no realice las acciones del controlador en caso de no estar registrado.
+   before_action :authenticate_user!
 	# GET /songs
    def index
    	@songs = Song.all
