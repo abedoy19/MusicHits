@@ -1,6 +1,7 @@
 <% @songs.each do |song| %>
 <h2>Título:</h2> 
 <%= song.name %>
-<h2>Artista:</h2>
-<%= song.singer %> 
+<div>
+<%= song.singer %> - <%= link_to "Eliminar", song, method: :delete %>
+</div>
 <% end %>

@@ -1,0 +1,10 @@
+<div style="width: 85%;margin:0 auto;">
+<h1 align="center">Canciones</h1>
+<% @songs.each do |song| %>
+<h1><%= link_to song.name, song %></h1> 
+<h2>Artista:</h2>
+<%= song.singer %>
+<h2>Album:</h2>
+<%= song.album %>  
+<% end %>
+</div>
