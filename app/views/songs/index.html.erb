@@ -1,4 +1,4 @@
-<div style="width: 85%;margin:0 auto;">
+<div style="width: 84%;margin:0 auto;">
 <h1>Mis canciones</h1><br>
 <table class="table table-hover">
   <thead>
@@ -7,9 +7,6 @@
       <th>Cantante</th>
       <th>Álbum</th>
       <th>Género</th>
-      <th>Año</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -21,9 +18,10 @@
       <td><%= song.genre %></td>
       <td><%= song.year %></td>
       <td><%= link_to "Eliminar", song, method: :delete %></td>
+      <td><%= link_to "Editar", edit_song_path(song) %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<div><%= link_to "Agregar", controller: "songs", action: "new" %></a></div>
+<div><%= link_to "Agregar", controller: "songs", action: "new" %></div>
 </div>
