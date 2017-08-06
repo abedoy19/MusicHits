@@ -8,7 +8,7 @@ default: &default
   adapter: postgresql
   pool: 5
   username: ana
-  password: eafit28*
+  password: 1152
   host: localhost
   port: 5432
 
@@ -33,10 +33,7 @@ test:
   port: 5432
 
 production:
-  database: musichits
+  database: musichits_production
   adapter: postgresql
-  pool: 5
   username: ana
   password: 1152
-  host: localhost
-  port: 5432

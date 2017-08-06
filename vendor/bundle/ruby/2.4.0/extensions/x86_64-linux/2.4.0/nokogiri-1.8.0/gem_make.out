@@ -1,0 +1,300 @@
+current directory: /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri
+/home/ana/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20170805-14845-1na04mx.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.2.0
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.4
+with the following patches applied:
+	- 0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch
+	- 0002-Fix-XPointer-paths-beginning-with-range-to.patch
+	- 0003-Disallow-namespace-nodes-in-XPointer-ranges.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.4.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4... OK
+Running git apply with /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/patches/libxml2/0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch... OK
+Running git apply with /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch... OK
+Running git apply with /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/patches/libxml2/0003-Disallow-namespace-nodes-in-XPointer-ranges.patch... OK
+Running 'configure' for libxml2 2.9.4... OK
+Running 'compile' for libxml2 2.9.4... OK
+Running 'install' for libxml2 2.9.4... OK
+Activating libxml2 2.9.4 (from /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ports/x86_64-pc-linux-gnu/libxml2/2.9.4)...
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxslt-1.1.29
+with the following patches applied:
+	- 0001-Fix-heap-overread-in-xsltFormatNumberConversion.patch
+	- 0002-Check-for-integer-overflow-in-xsltAddTextString.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+************************************************************************
+Extracting libxslt-1.1.29.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.29... OK
+Running git apply with /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/patches/libxslt/0001-Fix-heap-overread-in-xsltFormatNumberConversion.patch... OK
+Running git apply with /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/patches/libxslt/0002-Check-for-integer-overflow-in-xsltAddTextString.patch... OK
+Running 'configure' for libxslt 1.1.29... OK
+Running 'compile' for libxslt 1.1.29... OK
+Running 'install' for libxslt 1.1.29... OK
+Activating libxslt 1.1.29 (from /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ports/x86_64-pc-linux-gnu/libxslt/1.1.29)...
+checking for -llzma... no
+checking for xmlParseDoc() in libxml/parser.h... yes
+checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
+checking for exsltFuncRegister() in libexslt/exslt.h... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+current directory: /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri
+make "DESTDIR=" clean
+
+current directory: /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri
+make "DESTDIR="
+compiling html_document.c
+compiling html_element_description.c
+In file included from /home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33:0,
+                 from ./nokogiri.h:33,
+                 from ./html_element_description.h:4,
+                 from html_element_description.c:1:
+html_element_description.c: En la función ‘get_description’:
+html_element_description.c:252:40: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+   return Data_Wrap_Struct(klass, 0, 0, (void *)description);
+                                        ^
+/home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:1146:34: nota: in definition of macro ‘Data_Wrap_Struct’
+     rb_data_object_wrap((klass),(sval),(RUBY_DATA_FUNC)(mark),(RUBY_DATA_FUNC)(free))
+                                  ^
+html_element_description.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+compiling html_entity_lookup.c
+compiling html_sax_parser_context.c
+compiling html_sax_push_parser.c
+compiling nokogiri.c
+compiling xml_attr.c
+compiling xml_attribute_decl.c
+compiling xml_cdata.c
+compiling xml_comment.c
+compiling xml_document.c
+xml_document.c: En la función ‘set_encoding’:
+xml_document.c:182:12: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+       free((char *) doc->encoding); /* this may produce a gcc cast warning */
+            ^
+xml_document.c: En la función ‘canonicalize’:
+xml_document.c:535:15: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+       ns[i] = (xmlChar*) ptr;
+               ^
+xml_document.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+compiling xml_document_fragment.c
+compiling xml_dtd.c
+compiling xml_element_content.c
+compiling xml_element_decl.c
+compiling xml_encoding_handler.c
+compiling xml_entity_decl.c
+compiling xml_entity_reference.c
+compiling xml_io.c
+compiling xml_libxml2_hacks.c
+compiling xml_namespace.c
+xml_namespace.c: En la función ‘dealloc_namespace’:
+xml_namespace.c:17:13: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+     xmlFree((xmlChar *)ns->href);
+             ^
+xml_namespace.c:20:13: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+     xmlFree((xmlChar *)ns->prefix);
+             ^
+xml_namespace.c: En la función ‘part_of_an_xpath_node_set_eh’:
+xml_namespace.c:67:3: aviso: se pasa el argumento 1 de ‘Nokogiri_namespace_eh’ desde un tipo de puntero incompatible [activado por defecto]
+   return (node->next && ! Nokogiri_namespace_eh(node->next));
+   ^
+xml_namespace.c:27:5: nota: se esperaba ‘xmlNodePtr’ pero el argumento es de tipo ‘struct _xmlNs *’
+ int Nokogiri_namespace_eh(xmlNodePtr node)
+     ^
+xml_namespace.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+compiling xml_node.c
+xml_node.c: En la función ‘reparent_node_with’:
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_NODE’ no se maneja en un switch [-Wswitch]
+       switch (reparentee->type) {
+       ^
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_ENTITY_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_DOCUMENT_FRAG_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_NOTATION_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_HTML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_DTD_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_ELEMENT_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_ENTITY_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_NAMESPACE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_XINCLUDE_START’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_XINCLUDE_END’ no se maneja en un switch [-Wswitch]
+xml_node.c:170:7: aviso: el valor de enumeración ‘XML_DOCB_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_NODE’ no se maneja en un switch [-Wswitch]
+       switch (reparentee->type) {
+       ^
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_ENTITY_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_DOCUMENT_TYPE_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_DOCUMENT_FRAG_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_NOTATION_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_HTML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_DTD_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_ELEMENT_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_ENTITY_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_NAMESPACE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_XINCLUDE_START’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_XINCLUDE_END’ no se maneja en un switch [-Wswitch]
+xml_node.c:188:7: aviso: el valor de enumeración ‘XML_DOCB_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ELEMENT_NODE’ no se maneja en un switch [-Wswitch]
+       switch (reparentee->type) {
+       ^
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_CDATA_SECTION_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ENTITY_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_PI_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_COMMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_DOCUMENT_TYPE_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_DOCUMENT_FRAG_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_NOTATION_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_HTML_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_DTD_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ELEMENT_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ATTRIBUTE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_ENTITY_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_NAMESPACE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_XINCLUDE_START’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_XINCLUDE_END’ no se maneja en un switch [-Wswitch]
+xml_node.c:199:7: aviso: el valor de enumeración ‘XML_DOCB_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_CDATA_SECTION_NODE’ no se maneja en un switch [-Wswitch]
+     switch (parent->type) {
+     ^
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_ENTITY_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_PI_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_COMMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_DOCUMENT_TYPE_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_NOTATION_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_DTD_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_ELEMENT_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_ATTRIBUTE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_ENTITY_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_NAMESPACE_DECL’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_XINCLUDE_START’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_XINCLUDE_END’ no se maneja en un switch [-Wswitch]
+xml_node.c:167:5: aviso: el valor de enumeración ‘XML_DOCB_DOCUMENT_NODE’ no se maneja en un switch [-Wswitch]
+xml_node.c: En la función ‘get’:
+xml_node.c:847:11: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+   colon = (xmlChar *)xmlStrchr(attribute, (const xmlChar)':');
+           ^
+xml_node.c:865:11: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+   xmlFree((void *)attribute);
+           ^
+xml_node.c:869:11: aviso: la conversión descarta el calificador ‘__attribute__((const))’ del tipo del destino del puntero [-Wcast-qual]
+   xmlFree((void *)value);
+           ^
+xml_node.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+compiling xml_node_set.c
+compiling xml_processing_instruction.c
+compiling xml_reader.c
+compiling xml_relax_ng.c
+compiling xml_sax_parser.c
+xml_sax_parser.c: En la función ‘start_document’:
+xml_sax_parser.c:28:7: aviso: ISO C90 prohíbe mezclar declaraciones y código [-Wdeclaration-after-statement]
+       VALUE version = ctxt->version ? NOKOGIRI_STR_NEW2(ctxt->version) : Qnil;
+       ^
+xml_sax_parser.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+compiling xml_sax_parser_context.c
+compiling xml_sax_push_parser.c
+compiling xml_schema.c
+compiling xml_syntax_error.c
+compiling xml_text.c
+compiling xml_xpath_context.c
+compiling xslt_stylesheet.c
+xslt_stylesheet.c: En la función ‘initFunc’:
+xslt_stylesheet.c:217:5: aviso: el paso del argumento 1 de ‘rb_data_object_get’ crea un entero desde un puntero sin una conversión [activado por defecto]
+     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
+     ^
+In file included from /home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33:0,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+/home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:1348:1: nota: se esperaba ‘VALUE’ pero el argumento es de tipo ‘void *’
+ rb_data_object_get(VALUE obj)
+ ^
+xslt_stylesheet.c: En la función ‘shutdownFunc’:
+xslt_stylesheet.c:230:5: aviso: el paso del argumento 1 de ‘rb_data_object_get’ crea un entero desde un puntero sin una conversión [activado por defecto]
+     Data_Get_Struct(ctxt->style->_private, nokogiriXsltStylesheetTuple,
+     ^
+In file included from /home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby.h:33:0,
+                 from ./nokogiri.h:33,
+                 from ./xslt_stylesheet.h:4,
+                 from xslt_stylesheet.c:1:
+/home/ana/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:1348:1: nota: se esperaba ‘VALUE’ pero el argumento es de tipo ‘void *’
+ rb_data_object_get(VALUE obj)
+ ^
+xslt_stylesheet.c: En el nivel principal:
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-self-assign" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-constant-logical-operand" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-parentheses-equality" [activado por defecto]
+cc1: aviso: no se reconoce la opción de línea de órdenes "-Wno-tautological-compare" [activado por defecto]
+linking shared-object nokogiri/nokogiri.so
+Cleaning files only used during build.
+rm -rf /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports
+rm -rf /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ports
+
+current directory: /var/www/musichits/code/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20170805-14845-19g6u9s/nokogiri
