@@ -1,5 +1,6 @@
 <div style="width: 85%;margin:0 auto;">
 <h1>Canciones</h1><br>
+<p>Solo se muestran canciones públicas, para ver más inicie sesión.</p>
 <div style="width: 50%;margin:500 auto;"><input type="text" class="form-control" id="name", name="name" placeholder="Buscar canción">
 </div>
 <div><%= link_to "Buscar" %></div><br>
@@ -15,15 +16,15 @@
   </thead>
   <tbody>
   	 <% @songs.each do |song| %>
-     <% @users.each do |user| %>
     <tr>
       <td><%= song.name %></td>
       <td><%= song.singer %></td>
       <td><%= song.album %></td>
       <td><%= song.genre %></td>
-      <td><%= user.email %></td>
+      <% unless song.user.nil? %>
+      <td><%= song.user.email %></td>
+      <% end %>
     </tr>
-    <% end %>
     <% end %>
   </tbody>
 </table>
