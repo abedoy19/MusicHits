@@ -1,24 +1,9 @@
-# README
+# MusicHits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Por: Ana María Bedoya - abedoy19@eafit.edu.co
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# DEVELOPMENT:
+# 1. Creating the musichits aplication.
+$ rails new musichits
+# 2. Starting up the WebApp Server
+$ rails server
