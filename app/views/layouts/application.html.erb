@@ -22,11 +22,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Canciones", songs_path %></li>
           <% if user_signed_in? %>
-            <li><%= link_to "Mis canciones", controller: "songs", action: "index" %>
+            <li><%= link_to "Editar perfil", edit_user_registration_path %></li>
             <li><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "Canciones", publicsongs_path %></li>
             <li><%= link_to "Crear cuenta", new_user_registration_path %></li>
             <li><%= link_to "Iniciar sesión", new_user_session_path %></li><% end %>
           </ul>

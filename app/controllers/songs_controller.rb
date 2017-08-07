@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
    # Para que no realice las acciones del controlador en caso de no estar registrado.
-   before_action :authenticate_user!
+   before_action :authenticate_user!, except: [:index]
 	# GET /songs
    def index
    	@songs = Song.all
@@ -19,7 +19,7 @@ class SongsController < ApplicationController
 
    # POST /songs
    def create
-      @song = Song.new(song_params)
+      @song = current_user.songs.new(song_params)
       if @song.save
          redirect_to songs_path
       else
@@ -35,7 +35,7 @@ class SongsController < ApplicationController
    def update
       @song = Song.find(params[:id])
       if @song.update(song_params)
-         redirect_to @song
+         redirect_to songs_path
       else
          render :edit
       end
@@ -55,6 +55,6 @@ class SongsController < ApplicationController
 
    private 
    def song_params
-      params.require(:song).permit(:name, :singer, :album, :genre)
+      params.require(:song).permit(:name, :singer, :album, :genre, :state)
    end
 end
