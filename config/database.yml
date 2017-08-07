@@ -24,10 +24,10 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  database: musichits
+  database: musichits_test
   adapter: postgresql
   pool: 5
-  username: ana
+  username: anabd
   password: 1152
   host: localhost
   port: 5432
