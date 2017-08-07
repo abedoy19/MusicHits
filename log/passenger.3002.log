@@ -1,0 +1,483 @@
+[ 2017-08-06 16:15:28.7191 10278/7f24f28a3880 age/Wat/WatchdogMain.cpp:1283 ]: Starting Passenger watchdog...
+[ 2017-08-06 16:15:28.7252 10281/7f56532e7880 age/Cor/CoreMain.cpp:1083 ]: Starting Passenger core...
+[ 2017-08-06 16:15:28.7253 10281/7f56532e7880 age/Cor/CoreMain.cpp:248 ]: Passenger core running in multi-application mode.
+[ 2017-08-06 16:15:28.7271 10281/7f56532e7880 age/Cor/CoreMain.cpp:830 ]: Passenger core online, PID 10281
+[ 2017-08-06 16:15:28.7320 10289/7fdc1aff0880 age/Ust/UstRouterMain.cpp:537 ]: Starting Passenger UstRouter...
+[ 2017-08-06 16:15:28.7326 10289/7fdc1aff0880 age/Ust/UstRouterMain.cpp:350 ]: Passenger UstRouter online, PID 10289
+App 10330 stdout: 
+App 10330 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 10330 stderr:      This library provides various optimized routines that make
+App 10330 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 10330 stderr:      so that Phusion Passenger can compile one on the next run.
+App 10330 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 10330 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+[ 2017-08-06 16:15:31.7512 10281/7f565321a700 age/Cor/SecurityUpdateChecker.h:374 ]: Security update check: no update found (next check in 24 hours)
+App 10330 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 10330 stderr:      Trying next mirror...
+App 10330 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 10330 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 10330 stderr:   --> Passenger will still operate normally.
+App 10330 stdout: 
+[ 2017-08-06 16:15:32.7645 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: 77abc2fe
+  Error details saved to: /tmp/passenger-error-wxW3oG.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:15:32.7681 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 77abc2fe. Please see earlier logs for details about the error.
+App 11233 stdout: 
+App 11233 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 11233 stderr:      This library provides various optimized routines that make
+App 11233 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 11233 stderr:      so that Phusion Passenger can compile one on the next run.
+App 11233 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 11233 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 11233 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 11233 stderr:      Trying next mirror...
+App 11233 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 11233 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 11233 stderr:   --> Passenger will still operate normally.
+App 11233 stdout: 
+[ 2017-08-06 16:17:34.0649 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: f2ee7a30
+  Error details saved to: /tmp/passenger-error-giupNf.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:17:34.0687 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is f2ee7a30. Please see earlier logs for details about the error.
+App 11286 stdout: 
+App 11286 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 11286 stderr:      This library provides various optimized routines that make
+App 11286 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 11286 stderr:      so that Phusion Passenger can compile one on the next run.
+App 11286 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 11286 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 11286 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 11286 stderr:      Trying next mirror...
+App 11286 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 11286 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 11286 stderr:   --> Passenger will still operate normally.
+App 11286 stdout: 
+[ 2017-08-06 16:17:41.5966 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: 6b102322
+  Error details saved to: /tmp/passenger-error-jo6AKy.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:17:41.6009 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-3] Cannot checkout session because a spawning error occurred. The identifier of the error is 6b102322. Please see earlier logs for details about the error.
+App 11959 stdout: 
+App 11959 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 11959 stderr:      This library provides various optimized routines that make
+App 11959 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 11959 stderr:      so that Phusion Passenger can compile one on the next run.
+App 11959 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 11959 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 11959 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 11959 stderr:      Trying next mirror...
+App 11959 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 11959 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 11959 stderr:   --> Passenger will still operate normally.
+App 11959 stdout: 
+[ 2017-08-06 16:19:01.0724 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: 547da5d2
+  Error details saved to: /tmp/passenger-error-mgrW0H.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:19:01.0765 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-4] Cannot checkout session because a spawning error occurred. The identifier of the error is 547da5d2. Please see earlier logs for details about the error.
+[ 2017-08-06 16:19:01.0767 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-5] Cannot checkout session because a spawning error occurred. The identifier of the error is 547da5d2. Please see earlier logs for details about the error.
+App 12146 stdout: 
+App 12146 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 12146 stderr:      This library provides various optimized routines that make
+App 12146 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 12146 stderr:      so that Phusion Passenger can compile one on the next run.
+App 12146 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 12146 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 12146 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 12146 stderr:      Trying next mirror...
+App 12146 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 12146 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 12146 stderr:   --> Passenger will still operate normally.
+App 12146 stdout: 
+[ 2017-08-06 16:19:29.8650 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: 12a6bf15
+  Error details saved to: /tmp/passenger-error-3tiiZG.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:19:29.8691 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-6] Cannot checkout session because a spawning error occurred. The identifier of the error is 12a6bf15. Please see earlier logs for details about the error.
+[ 2017-08-06 16:19:29.8692 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-7] Cannot checkout session because a spawning error occurred. The identifier of the error is 12a6bf15. Please see earlier logs for details about the error.
+App 12638 stdout: 
+App 12638 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 12638 stderr:      This library provides various optimized routines that make
+App 12638 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 12638 stderr:      so that Phusion Passenger can compile one on the next run.
+App 12638 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 12638 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 12638 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 12638 stderr:      Trying next mirror...
+App 12638 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 12638 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 12638 stderr:   --> Passenger will still operate normally.
+App 12638 stdout: 
+[ 2017-08-06 16:20:19.3720 10281/7f564c1fc700 age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/musichits/code: An error occurred while starting up the preloader.
+  Error ID: c92242b6
+  Error details saved to: /tmp/passenger-error-RUafNy.html
+  Message from application: You are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/musichits/code/Gemfile freeze 
+by running `bundle install --no-deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* passenger
+ (Bundler::ProductionError)
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/definition.rb:457:in `ensure_equivalent_gemfile_and_lockfile'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/runtime.rb:14:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler.rb:101:in `setup'
+  /usr/local/rvm/gems/ruby-2.4.0/gems/bundler-1.15.3/lib/bundler/setup.rb:19:in `<top (required)>'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/local/rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:430:in `activate_gem'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:297:in `block in run_load_path_setup_code'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:435:in `running_bundler'
+  /usr/share/ruby/vendor_ruby/phusion_passenger/loader_shared_helpers.rb:296:in `run_load_path_setup_code'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:100:in `preload_app'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /usr/share/passenger/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ 2017-08-06 16:20:19.3761 10281/7f564d49c700 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-8] Cannot checkout session because a spawning error occurred. The identifier of the error is c92242b6. Please see earlier logs for details about the error.
+App 17458 stdout: 
+App 17458 stderr:  [passenger_native_support.so] not found for current Ruby interpreter.
+App 17458 stderr:      This library provides various optimized routines that make
+App 17458 stderr:      Phusion Passenger faster. Please run 'sudo yum install passenger-devel-5.1.7'
+App 17458 stderr:      so that Phusion Passenger can compile one on the next run.
+App 17458 stderr:  [passenger_native_support.so] finding downloads for the current Ruby interpreter...
+App 17458 stderr:      (set PASSENGER_DOWNLOAD_NATIVE_SUPPORT_BINARY=0 to disable)
+App 17458 stderr:      Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+App 17458 stderr:      Trying next mirror...
+App 17458 stderr:      Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.1.7/rubyext-ruby-2.4.0-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+App 17458 stderr:  [passenger_native_support.so] will not be used (can't compile or download) 
+App 17458 stderr:   --> Passenger will still operate normally.
+App 17537 stdout: 
+App 17537 stdout: [a1c4410d-6d2c-49a7-be85-0cd392007bf3] Started GET "/" for 10.131.137.254 at 2017-08-06 16:25:13 -0400
+App 17537 stdout: [a1c4410d-6d2c-49a7-be85-0cd392007bf3] Processing by WelcomeController#index as HTML
+App 17537 stdout: [a1c4410d-6d2c-49a7-be85-0cd392007bf3]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [a1c4410d-6d2c-49a7-be85-0cd392007bf3]   Rendered welcome/index.html.erb within layouts/application (0.8ms)
+App 17537 stdout: [a1c4410d-6d2c-49a7-be85-0cd392007bf3] Completed 200 OK in 35ms (Views: 18.7ms)
+App 17537 stdout: [e24f30d7-dd57-4e24-b42a-36d4fe7663ab] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:03 -0400
+App 17537 stdout: [e24f30d7-dd57-4e24-b42a-36d4fe7663ab] Processing by WelcomeController#index as HTML
+App 17537 stdout: [e24f30d7-dd57-4e24-b42a-36d4fe7663ab]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [e24f30d7-dd57-4e24-b42a-36d4fe7663ab]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [e24f30d7-dd57-4e24-b42a-36d4fe7663ab] Completed 200 OK in 2ms (Views: 1.6ms)
+App 17537 stdout: [c10cc0a7-b0e2-4448-bfe2-f9bb27686487] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:03 -0400
+App 17537 stdout: [c10cc0a7-b0e2-4448-bfe2-f9bb27686487] Processing by WelcomeController#index as HTML
+App 17537 stdout: [c10cc0a7-b0e2-4448-bfe2-f9bb27686487]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [c10cc0a7-b0e2-4448-bfe2-f9bb27686487]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [c10cc0a7-b0e2-4448-bfe2-f9bb27686487] Completed 200 OK in 2ms (Views: 1.4ms)
+App 17537 stdout: [231e6d92-fa8b-42ec-b3e3-ca1ef956408a] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:04 -0400
+App 17537 stdout: [231e6d92-fa8b-42ec-b3e3-ca1ef956408a] Processing by WelcomeController#index as HTML
+App 17537 stdout: [231e6d92-fa8b-42ec-b3e3-ca1ef956408a]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [231e6d92-fa8b-42ec-b3e3-ca1ef956408a]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [231e6d92-fa8b-42ec-b3e3-ca1ef956408a] Completed 200 OK in 2ms (Views: 1.3ms)
+App 17537 stdout: [454933c4-7883-41a2-9865-159dfda22a2b] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:04 -0400
+App 17537 stdout: [454933c4-7883-41a2-9865-159dfda22a2b] Processing by WelcomeController#index as HTML
+App 17537 stdout: [454933c4-7883-41a2-9865-159dfda22a2b]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [454933c4-7883-41a2-9865-159dfda22a2b]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [454933c4-7883-41a2-9865-159dfda22a2b] Completed 200 OK in 2ms (Views: 1.3ms)
+App 17537 stdout: [8f644d03-b07e-4978-b2a1-2c3d1982edd8] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:09 -0400
+App 17537 stdout: [8f644d03-b07e-4978-b2a1-2c3d1982edd8] Processing by WelcomeController#index as HTML
+App 17537 stdout: [8f644d03-b07e-4978-b2a1-2c3d1982edd8]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [8f644d03-b07e-4978-b2a1-2c3d1982edd8]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [8f644d03-b07e-4978-b2a1-2c3d1982edd8] Completed 200 OK in 2ms (Views: 1.2ms)
+App 17537 stdout: [3037c6ef-c5f4-426a-853a-8f61875589e5] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:12 -0400
+App 17537 stdout: [3037c6ef-c5f4-426a-853a-8f61875589e5] Processing by WelcomeController#index as HTML
+App 17537 stdout: [3037c6ef-c5f4-426a-853a-8f61875589e5]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [3037c6ef-c5f4-426a-853a-8f61875589e5]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [3037c6ef-c5f4-426a-853a-8f61875589e5] Completed 200 OK in 2ms (Views: 1.3ms)
+App 17537 stdout: [6ee4e86e-4289-4539-82e0-198875de83ba] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:24 -0400
+App 17537 stdout: [6ee4e86e-4289-4539-82e0-198875de83ba] Processing by WelcomeController#index as HTML
+App 17537 stdout: [6ee4e86e-4289-4539-82e0-198875de83ba]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [6ee4e86e-4289-4539-82e0-198875de83ba]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [6ee4e86e-4289-4539-82e0-198875de83ba] Completed 200 OK in 2ms (Views: 1.5ms)
+App 17537 stdout: [b5b2e0f0-f0d1-48c5-9637-050b997abf77] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:25 -0400
+App 17537 stdout: [b5b2e0f0-f0d1-48c5-9637-050b997abf77] Processing by WelcomeController#index as HTML
+App 17537 stdout: [b5b2e0f0-f0d1-48c5-9637-050b997abf77]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [b5b2e0f0-f0d1-48c5-9637-050b997abf77]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [b5b2e0f0-f0d1-48c5-9637-050b997abf77] Completed 200 OK in 2ms (Views: 1.2ms)
+App 17537 stdout: [9ee41e87-653a-4a0f-a2e8-60d3aae70bae] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:26 -0400
+App 17537 stdout: [9ee41e87-653a-4a0f-a2e8-60d3aae70bae] Processing by WelcomeController#index as HTML
+App 17537 stdout: [9ee41e87-653a-4a0f-a2e8-60d3aae70bae]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [9ee41e87-653a-4a0f-a2e8-60d3aae70bae]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [9ee41e87-653a-4a0f-a2e8-60d3aae70bae] Completed 200 OK in 2ms (Views: 1.3ms)
+App 17537 stdout: [4299e419-fbea-444a-82e4-3896c5f3cdcb] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:29 -0400
+App 17537 stdout: [4299e419-fbea-444a-82e4-3896c5f3cdcb] Processing by WelcomeController#index as HTML
+App 17537 stdout: [4299e419-fbea-444a-82e4-3896c5f3cdcb]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [4299e419-fbea-444a-82e4-3896c5f3cdcb]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [4299e419-fbea-444a-82e4-3896c5f3cdcb] Completed 200 OK in 2ms (Views: 1.2ms)
+App 17537 stdout: [8f37ecc9-a76f-4608-88f0-41ceaa44e4a7] Started GET "/" for 10.131.137.254 at 2017-08-06 16:26:30 -0400
+App 17537 stdout: [8f37ecc9-a76f-4608-88f0-41ceaa44e4a7] Processing by WelcomeController#index as HTML
+App 17537 stdout: [8f37ecc9-a76f-4608-88f0-41ceaa44e4a7]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [8f37ecc9-a76f-4608-88f0-41ceaa44e4a7]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [8f37ecc9-a76f-4608-88f0-41ceaa44e4a7] Completed 200 OK in 2ms (Views: 1.3ms)
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d] Started GET "/publicsongs" for 10.131.137.254 at 2017-08-06 16:27:09 -0400
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d] Processing by WelcomeController#publicsongs as HTML
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d]   Rendering welcome/publicsongs.html.erb within layouts/application
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d]   [1m[36mSong Load (18.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d]   Rendered welcome/publicsongs.html.erb within layouts/application (200.8ms)
+App 17537 stdout: [5595491f-18ac-4fab-acbf-9b946a0ee49d] Completed 200 OK in 209ms (Views: 202.6ms | ActiveRecord: 184.1ms)
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314] Started GET "/users/sign_up" for 10.131.137.254 at 2017-08-06 16:27:12 -0400
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314] Processing by Devise::RegistrationsController#new as HTML
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314]   Rendering devise/registrations/new.html.erb within layouts/application
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314]   Rendered devise/shared/_links.html.erb (1.2ms)
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314]   Rendered devise/registrations/new.html.erb within layouts/application (54.8ms)
+App 17537 stdout: [543191a8-453f-41d4-aa71-35757ff88314] Completed 200 OK in 91ms (Views: 63.7ms | ActiveRecord: 4.8ms)
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d] Started GET "/users/sign_in" for 10.131.137.254 at 2017-08-06 16:27:13 -0400
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d] Processing by Devise::SessionsController#new as HTML
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d]   Rendering devise/sessions/new.html.erb within layouts/application
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d]   Rendered devise/shared/_links.html.erb (0.6ms)
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d]   Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+App 17537 stdout: [a91ff55e-42aa-465f-9d38-3cc7a173c21d] Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [e25ea9cb-111d-47f0-a79b-7d14d81b1059] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:15 -0400
+App 17537 stdout: [e25ea9cb-111d-47f0-a79b-7d14d81b1059] Processing by WelcomeController#index as HTML
+App 17537 stdout: [e25ea9cb-111d-47f0-a79b-7d14d81b1059]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [e25ea9cb-111d-47f0-a79b-7d14d81b1059]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [e25ea9cb-111d-47f0-a79b-7d14d81b1059] Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0] Started GET "/users/sign_in" for 10.131.137.254 at 2017-08-06 16:27:17 -0400
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0] Processing by Devise::SessionsController#new as HTML
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0]   Rendering devise/sessions/new.html.erb within layouts/application
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0]   Rendered devise/shared/_links.html.erb (0.2ms)
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0]   Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+App 17537 stdout: [a3695f8a-9c9a-45e9-ad6c-17ecc17bf7b0] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [37ade1ea-a96c-452a-b0ee-28472b31eaa5] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:18 -0400
+App 17537 stdout: [37ade1ea-a96c-452a-b0ee-28472b31eaa5] Processing by WelcomeController#index as HTML
+App 17537 stdout: [37ade1ea-a96c-452a-b0ee-28472b31eaa5]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [37ade1ea-a96c-452a-b0ee-28472b31eaa5]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [37ade1ea-a96c-452a-b0ee-28472b31eaa5] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [3d969cb7-40fb-4992-b0cb-35912d2ae456] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:18 -0400
+App 17537 stdout: [3d969cb7-40fb-4992-b0cb-35912d2ae456] Processing by WelcomeController#index as HTML
+App 17537 stdout: [3d969cb7-40fb-4992-b0cb-35912d2ae456]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [3d969cb7-40fb-4992-b0cb-35912d2ae456]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [3d969cb7-40fb-4992-b0cb-35912d2ae456] Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [c0467673-71b0-4409-940f-ebf408efbf00] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:22 -0400
+App 17537 stdout: [c0467673-71b0-4409-940f-ebf408efbf00] Processing by WelcomeController#index as HTML
+App 17537 stdout: [c0467673-71b0-4409-940f-ebf408efbf00]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [c0467673-71b0-4409-940f-ebf408efbf00]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [c0467673-71b0-4409-940f-ebf408efbf00] Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [7b5d00cd-db09-491b-9b2a-c85581a4ebb2] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:23 -0400
+App 17537 stdout: [7b5d00cd-db09-491b-9b2a-c85581a4ebb2] Processing by WelcomeController#index as HTML
+App 17537 stdout: [7b5d00cd-db09-491b-9b2a-c85581a4ebb2]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [7b5d00cd-db09-491b-9b2a-c85581a4ebb2]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [7b5d00cd-db09-491b-9b2a-c85581a4ebb2] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [d1232e4a-73b7-489d-b180-ba4be79a2a64] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:23 -0400
+App 17537 stdout: [d1232e4a-73b7-489d-b180-ba4be79a2a64] Processing by WelcomeController#index as HTML
+App 17537 stdout: [d1232e4a-73b7-489d-b180-ba4be79a2a64]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [d1232e4a-73b7-489d-b180-ba4be79a2a64]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [d1232e4a-73b7-489d-b180-ba4be79a2a64] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [3ed2089a-fd05-463c-aca1-9fc764b6ebbd] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:24 -0400
+App 17537 stdout: [3ed2089a-fd05-463c-aca1-9fc764b6ebbd] Processing by WelcomeController#index as HTML
+App 17537 stdout: [3ed2089a-fd05-463c-aca1-9fc764b6ebbd]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [3ed2089a-fd05-463c-aca1-9fc764b6ebbd]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [3ed2089a-fd05-463c-aca1-9fc764b6ebbd] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [ffa908ee-ef34-49be-ae58-7027c22f5841] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:25 -0400
+App 17537 stdout: [ffa908ee-ef34-49be-ae58-7027c22f5841] Processing by WelcomeController#index as HTML
+App 17537 stdout: [ffa908ee-ef34-49be-ae58-7027c22f5841]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [ffa908ee-ef34-49be-ae58-7027c22f5841]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [ffa908ee-ef34-49be-ae58-7027c22f5841] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [041247e5-84c9-4200-8682-9a6b3130784b] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:31 -0400
+App 17537 stdout: [041247e5-84c9-4200-8682-9a6b3130784b] Processing by WelcomeController#index as HTML
+App 17537 stdout: [041247e5-84c9-4200-8682-9a6b3130784b]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [041247e5-84c9-4200-8682-9a6b3130784b]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [041247e5-84c9-4200-8682-9a6b3130784b] Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [bf4bbde6-2c15-435c-ac50-1530669e9514] Started GET "/" for 10.131.137.254 at 2017-08-06 16:27:32 -0400
+App 17537 stdout: [bf4bbde6-2c15-435c-ac50-1530669e9514] Processing by WelcomeController#index as HTML
+App 17537 stdout: [bf4bbde6-2c15-435c-ac50-1530669e9514]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [bf4bbde6-2c15-435c-ac50-1530669e9514]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [bf4bbde6-2c15-435c-ac50-1530669e9514] Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [93c69650-f75e-47b4-a26f-962054036769] Started GET "/" for 10.131.137.254 at 2017-08-06 16:28:54 -0400
+App 17537 stdout: [93c69650-f75e-47b4-a26f-962054036769] Processing by WelcomeController#index as HTML
+App 17537 stdout: [93c69650-f75e-47b4-a26f-962054036769]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [93c69650-f75e-47b4-a26f-962054036769]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [93c69650-f75e-47b4-a26f-962054036769] Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a] Started GET "/publicsongs" for 10.131.137.254 at 2017-08-06 16:28:57 -0400
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a] Processing by WelcomeController#publicsongs as HTML
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a]   Rendering welcome/publicsongs.html.erb within layouts/application
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a]   [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a]   Rendered welcome/publicsongs.html.erb within layouts/application (1.9ms)
+App 17537 stdout: [9abb99e1-a69a-4915-b015-d4df6d4b9b3a] Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a] Started GET "/users/sign_up" for 10.131.137.254 at 2017-08-06 16:29:01 -0400
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a] Processing by Devise::RegistrationsController#new as HTML
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a]   Rendering devise/registrations/new.html.erb within layouts/application
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a]   Rendered devise/shared/_links.html.erb (0.2ms)
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a]   Rendered devise/registrations/new.html.erb within layouts/application (2.9ms)
+App 17537 stdout: [12e988e9-c4e0-4d16-8dc7-95448897019a] Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788] Started GET "/users/sign_in" for 10.131.137.254 at 2017-08-06 16:29:03 -0400
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788] Processing by Devise::SessionsController#new as HTML
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788]   Rendering devise/sessions/new.html.erb within layouts/application
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788]   Rendered devise/shared/_links.html.erb (0.3ms)
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788]   Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+App 17537 stdout: [18cd66ee-792d-4a93-8285-f3d52cc68788] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f] Started GET "/users/sign_up" for 10.131.137.254 at 2017-08-06 16:29:05 -0400
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f] Processing by Devise::RegistrationsController#new as HTML
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f]   Rendering devise/registrations/new.html.erb within layouts/application
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f]   Rendered devise/shared/_links.html.erb (0.2ms)
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f]   Rendered devise/registrations/new.html.erb within layouts/application (2.4ms)
+App 17537 stdout: [7fd92680-39d6-44db-9f7f-45356b3c871f] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28] Started GET "/publicsongs" for 10.131.137.254 at 2017-08-06 16:29:06 -0400
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28] Processing by WelcomeController#publicsongs as HTML
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28]   Rendering welcome/publicsongs.html.erb within layouts/application
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28]   [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28]   Rendered welcome/publicsongs.html.erb within layouts/application (1.2ms)
+App 17537 stdout: [51fbad1d-1350-4772-a8bd-2494d4fe0d28] Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9] Started GET "/users/sign_in" for 10.131.137.254 at 2017-08-06 16:29:07 -0400
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9] Processing by Devise::SessionsController#new as HTML
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9]   Rendering devise/sessions/new.html.erb within layouts/application
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9]   Rendered devise/shared/_links.html.erb (0.3ms)
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9]   Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+App 17537 stdout: [1bdd6527-55eb-4662-b24e-a8487712b9e9] Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [231c4231-facc-44d4-8939-c84b82f3c9ba] Started GET "/" for 10.131.137.254 at 2017-08-06 16:29:09 -0400
+App 17537 stdout: [231c4231-facc-44d4-8939-c84b82f3c9ba] Processing by WelcomeController#index as HTML
+App 17537 stdout: [231c4231-facc-44d4-8939-c84b82f3c9ba]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [231c4231-facc-44d4-8939-c84b82f3c9ba]   Rendered welcome/index.html.erb within layouts/application (0.0ms)
+App 17537 stdout: [231c4231-facc-44d4-8939-c84b82f3c9ba] Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742] Started GET "/users/sign_in" for 10.131.137.254 at 2017-08-06 16:29:10 -0400
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742] Processing by Devise::SessionsController#new as HTML
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742]   Rendering devise/sessions/new.html.erb within layouts/application
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742]   Rendered devise/shared/_links.html.erb (0.3ms)
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742]   Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+App 17537 stdout: [36e0a52a-8ee7-4dcf-936b-cedc820e7742] Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+App 17537 stdout: [79c296ad-f8c2-4b76-ba43-a94c35162842] Started GET "/" for 10.131.137.254 at 2017-08-06 16:30:34 -0400
+App 17537 stdout: [79c296ad-f8c2-4b76-ba43-a94c35162842] Processing by WelcomeController#index as HTML
+App 17537 stdout: [79c296ad-f8c2-4b76-ba43-a94c35162842]   Rendering welcome/index.html.erb within layouts/application
+App 17537 stdout: [79c296ad-f8c2-4b76-ba43-a94c35162842]   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+App 17537 stdout: [79c296ad-f8c2-4b76-ba43-a94c35162842] Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
