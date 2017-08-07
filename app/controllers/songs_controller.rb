@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
    # Para que no realice las acciones del controlador en caso de no estar registrado.
-   before_action :authenticate_user!
+   before_action :authenticate_user!, except: [:index]
 	# GET /songs
    def index
    	@songs = Song.all
@@ -55,6 +55,6 @@ class SongsController < ApplicationController
 
    private 
    def song_params
-      params.require(:song).permit(:name, :singer, :album, :genre)
+      params.require(:song).permit(:name, :singer, :album, :genre, :state)
    end
 end
