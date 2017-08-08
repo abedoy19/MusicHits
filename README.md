@@ -1,5 +1,5 @@
 # MusicHits 
-Es una aplicación web la cual contendrá información básica de las canciones que suban diferentes usuarios. Para ser parte de la plataforma el usuario deberá tener una cuenta, una vez creada este podrá añadir una canción de su preferencia o ver las canciones que otros usuarios hayan compartido. Las canciones agregadas podrán ser actualizadas y eliminadas posteriormente por el usuario
+Es una aplicación web la cual contiene información básica de las canciones que suben diferentes usuarios. Para ser parte de la plataforma el usuario debe tener una cuenta, en la cual podrá añadir una canción de su preferencia o ver las canciones que otros usuarios hayan compartido. Las canciones agregadas podrán ser actualizadas y eliminadas posteriormente por el usuario
 
 ## (Proyecto 1 Asignatura Tópicos Especiales en Telemática)
 ## Por Ana María Bedoya - abedoy19@eafit.edu.co
@@ -26,7 +26,7 @@ Es una aplicación web la cual contendrá información básica de las canciones 
 
 	rails generate controller welcome index
 
-## 6. Las rutas REST de la aplicación pueden conocerse ejecutando el siguiente comando:     
+## 6. Los servicios REST de la aplicación pueden conocerse ejecutando el siguiente comando:     
 
         rake routes
 
@@ -58,6 +58,34 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                          DELETE /songs/:id(.:format)           songs#destroy
                     root GET    /                              welcome#index
           welcome_create GET    /welcome/create(.:format)      welcome#create
+
+* Descripción:
+* Se utiliza para obtener el formulario con los campos para iniciar sesión.
+		GET    /users/sign_in
+
+* Los datos son enviados y si estos son correctos, se procede a iniciar sesión.
+		POST   /users/sign_in
+
+* Finaliza la sesión actual.
+		DELETE /users/sign_out
+
+* Muestra la lista de canciones existentes, dependiendo del tipo de publicación (pública, privada o compartida)
+		 GET    /songs
+
+* Se encarga de almacenar los datos de una canción nueva en la base de datos.
+		 POST   /songs
+
+* Carga el formulario para agregar una nueva canción a la base de datos.
+		 GET    /songs/new
+
+* Retorna el formulario para editar una canción.
+		 GET    /songs/:id/edit
+
+* Modifica una canción en la base de datos.
+		 PUT    /songs/:id
+
+* Elimina una canción de la base de datos.
+		 DELETE /songs/:id
 
 ## 7. Controlador para los REST services de 'songs'.
 

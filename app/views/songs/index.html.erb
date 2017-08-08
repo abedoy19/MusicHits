@@ -2,14 +2,18 @@
 <h1>Canciones</h1><br>
 <p>Si no ha iniciado sesión, solo se muestran canciones públicas, para ver más inicie sesión.</p><br>
 <div style="width: 50%;margin:500 auto;">
+<div class="field">
 <%= form_tag "welcome/create", method: :get, remote: true, id:"search-form" do %>
   <%= text_field_tag :keyword, nil, placeholder: "Buscar canción" %>
-  <%= content_tag :button, class: "btn btn-primary", type: :submit do %>
+  <%= content_tag :button, type: :submit, class: "btn btn-primary" do %>
   Buscar
   <% end %>
 <% end %>
 </div>
+</div>
+<div class="field">
 <div id="resultados">
+</div>
 </div><br>
 <table class="table table-hover">
   <thead>
