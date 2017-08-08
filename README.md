@@ -1,4 +1,6 @@
 # MusicHits 
+Es una aplicación web la cual contendrá información básica de las canciones que suban diferentes usuarios. Para ser parte de la plataforma el usuario deberá tener una cuenta, una vez creada este podrá añadir una canción de su preferencia o ver las canciones que otros usuarios hayan compartido. Las canciones agregadas podrán ser actualizadas y eliminadas posteriormente por el usuario
+
 ## (Proyecto 1 Asignatura Tópicos Especiales en Telemática)
 ## Por Ana María Bedoya - abedoy19@eafit.edu.co
 
@@ -18,11 +20,11 @@
 
 ## 4. Para modificar la página principal se procede a editar la siguiente dirección:
 
-        app/views/welcome/index.html.erb
+      	app/views/welcome/index.html.erb
 
 ## 5. Para generar el controlador de la vista welcome, se escribe lo siguiente en la línea de comandos:
 
-		rails generate controller welcome index
+	rails generate controller welcome index
 
 ## 6. Las rutas REST de la aplicación pueden conocerse ejecutando el siguiente comando:     
 
@@ -69,7 +71,7 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
 
     	rails db:migrate 
 
-## 10. Instalamos postgresql in el ambiente de test y producción.
+## 10. Instalamos postgresql en el ambiente de test y producción.
 
 * Se debe modificar el Gemfile, el config/database.yml y luego se elimina, crea y migra la base de datos así
 		
@@ -118,6 +120,31 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
         user1@test$ sudo firewall-cmd --reload
 
 ## Luego se procede a clonar el repositorio, migrar la base de datos y a correr rails s.
+
+# Instalación de Apache Web Server en el DCA.
+
+        sudo yum install httpd
+        sudo systemctl enable httpd
+        sudo systemctl start httpd
+
+        Probamos en el navegador http://10.131.137.236
+
+* Instalación de YARN (https://yarnpkg.com/en/docs/install) (para hacer rake assets:precompile):  
+
+* Instalar el módulo Passenger para Rails en HTTPD (https://www.phusionpassenger.com/library/install/apache/install/oss/el7/):
+
+        gem install passenger
+        passenger-install-apache2-module
+
+Al finalizar la instalación, agregar a /etc/http/conf/httpd.conf:
+
+        LoadModule passenger_module /home/ana/.rvm/gems/ruby-2.4.1/gems/passenger-5.1.6/buildout/apache2/mod_passenger.so
+        <IfModule mod_passenger.c>
+          PassengerRoot /home/ana/.rvm/gems/ruby-2.4.1/gems/passenger-5.1.6
+          PassengerDefaultRuby /home/ana/.rvm/gems/ruby-2.4.1/wrappers/ruby
+        </IfModule>
+
+* Configurar la aplicación de RoR para que use Passenger (https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/apache/oss/el7/deploy_app.html):
 
 
 
